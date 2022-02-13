@@ -1,0 +1,90 @@
+body{
+    background-color: #6666ff;
+  }
+  .menu{
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      cursor: pointer;
+      height: 30px;
+      width: 32px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center; 
+  }
+  .menu-item, .menu-item::before {
+      -webkit-transition: all 0.2s ease-in-out ;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; 
+  }
+  .menu-item:nth-child(2), .menu-item:nth-child(2)::before{
+      -webkit-transition: all 0.2s ease-in-out 0.1s;
+      -moz-transition: all 0.2s ease-in-out 0.1s;
+      -o-transition: all 0.2s ease-in-out 0.1s;
+      transition: all 0.2s ease-in-out 0.1s; 
+  }
+  .menu-item:nth-child(3), .menu-item:nth-child(3)::before{
+      -webkit-transition: all 0.2s ease-in-out 0.2s;
+      -moz-transition: all 0.2s ease-in-out 0.2s;
+      -o-transition: all 0.2s ease-in-out 0.2s;
+      transition: all 0.2s ease-in-out 0.2s; 
+  }
+  .menu-icon.active .menu-item, .menu-icon.active .menu-item::before {
+      -webkit-transition: all 0.2s ease-in-out 0.2s;
+      -moz-transition: all 0.2s ease-in-out 0.2s;
+      -o-transition: all 0.2s ease-in-out 0.2s;
+      transition: all 0.2s ease-in-out 0.2s; 
+  }
+  .menu.active .menu-item:nth-child(2), .menu.active .menu-item:nth-child(2)::before {
+      -webkit-transition: all 0.2s ease-in-out 0.1s;
+      -moz-transition: all 0.2s ease-in-out 0.1s;
+      -o-transition: all 0.2s ease-in-out 0.1s;
+      transition: all 0.2s ease-in-out 0.1s; 
+  }
+  .menu-icon.active .menu-item:nth-child(3), .menu-icon.active .menu-item:nth-child(3)::before {
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s; 
+  }
+  .menu-item {
+      list-style-type: none;
+      width: 32px;
+      height: 3px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      margin: auto 0; 
+  }
+  .menu-item:before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    left: -8px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 3px; 
+  }
+  .menu-item:nth-child(3) {
+    width: 24px;
+    margin-right: 8px; 
+  }
+  .menu.active .menu-item {
+      width: 0; 
+  }
+  .menu.active .menu-item:before {
+        left: 12px; 
+  }
